@@ -36,7 +36,6 @@ export default function Register(props) {
     let errorMsg = [];
     let errorFields = [];
     if (state.fName === "") {
-      console.log(state);
       errorMsg.push("First Name is required");
       errorFields.push("fName");
     }
@@ -72,7 +71,6 @@ export default function Register(props) {
         errorFields: [],
       });
     } else {
-      console.log(errorMsg);
       setState({
         ...state,
         error: true,
@@ -116,7 +114,6 @@ export default function Register(props) {
       >
         <div
           style={{
-            marginTop: "10%",
             justifyContent: "space-evenly",
             minHeight: "80vh",
             display: "flex",
@@ -138,7 +135,12 @@ export default function Register(props) {
               }}
             >
               <div
-                style={{ background: "#1a65e0", padding: 10, borderRadius: 10 }}
+                style={{
+                  background: "#1a65e0",
+                  padding: 10,
+                  borderRadius: 10,
+                  elevation: 5,
+                }}
               >
                 <img
                   src={eachField.icon}
@@ -167,7 +169,7 @@ export default function Register(props) {
         style={{
           width: "60%",
           flexDirection: "column",
-          marginTop: "10%",
+          // marginTop: "10%",
           padding: 10,
           margin: 5,
         }}
@@ -175,7 +177,7 @@ export default function Register(props) {
         <div
           style={{
             flexDirection: "column",
-            marginTop: "10%",
+            // marginTop: "10%",
             padding: 10,
             margin: 5,
           }}
@@ -184,6 +186,14 @@ export default function Register(props) {
           {SERVICECONSTANTS.REGISTER.Name.map((eachField, i) => (
             <div key={i}>{switcher(eachField)}</div>
           ))}
+          <div class="">
+            <textarea
+              id="message"
+              class="form__field"
+              placeholder="Your Message"
+              rows="4"
+            ></textarea>
+          </div>
           <div>
             <Button
               data={{

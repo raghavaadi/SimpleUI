@@ -2,7 +2,7 @@ import React from "react";
 export default function (props) {
   let data = props.data;
   return (
-    <div className="col-2 input-effect">
+    <div className="col-5 input-effect">
       <div
         onClick={props.cb}
         style={{

@@ -12,25 +12,30 @@
     outline: 0;
     font-size: 16px;
     color: #212121;
-    padding: 7px 0;
+    padding: 20px;
     background: transparent;
+    margin-bottom: 10px;
     transition: border-color 0.2s;
 }
 
 .form__field::placeholder {
-    color: transparent;
+    color: #aaa;
 }
 
 .form__field:placeholder-shown~.form__label {
     font-size: 16px;
     cursor: text;
-    top: 20px;
+    /* top: 20px; */
+}
+
+textarea::placeholder {
+    color: #000;
 }
 
 label,
 .form__field:focus~.form__label {
     position: absolute;
-    top: 0;
+
     display: block;
     transition: 0.2s;
     font-size: 12px;

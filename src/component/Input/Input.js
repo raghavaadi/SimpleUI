@@ -2,7 +2,6 @@ import React from "react";
 import "./input.css";
 export default function Input(props) {
   let data = props.data;
-  console.log(props.state);
   return (
     <div className="col-3 input-effect">
       <input
